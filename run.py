@@ -7,6 +7,12 @@ def welcome_screen():
     and welcome them to the game.
     """
     player_name = input("Please enter your username:\n ")
-    print(f"Hi {player_name}, welcome to The Hangman's stage. Please try to guess what The Hangman's word is and see if you can escape him")
+    print(f"Hi {player_name}, welcome to Hangman.")
+    print(
+        """
+        The rules of the game are simple. Guessing 1 letter at a time, you have 6 lives to guess The Hangman's secret word.
+        Let's see if you can escape The Hangman's stage!
+        """
+        )
 
 welcome_screen()
