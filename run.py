@@ -15,7 +15,7 @@ def welcome_screen():
         """
         )
     
-    play_game = input("Would you like to play Hangman:\n ")
+    play_game = input("Would you like to play Hangman:\n ").lower()
     if play_game == "y":
         run_game()
     elif play_game == "n":
@@ -23,11 +23,16 @@ def welcome_screen():
     else:
         print("Please enter a valid selection")
 
+def get_word(words):
+    word = random.choice(words)
+    return word
+
+
 def run_game():
     """
     Will start the game if the user enters 'y' on the welcome screen.
     """
-    print("Game running")
+    word = get_word(words)
+
 
 welcome_screen()
-
