@@ -24,6 +24,9 @@ def welcome_screen():
         print("Please enter a valid selection")
 
 def get_word(words):
+    """
+    Will randomly select a word from words.py for the player to guess.
+    """
     word = random.choice(words)
     return word
 
@@ -33,6 +36,14 @@ def run_game():
     Will start the game if the user enters 'y' on the welcome screen.
     """
     word = get_word(words)
+    secret = "_" * len(word)
+    print(secret)
+    already_guessed = []
+    lives_left = 6
+    guessed_letters = input("Please guess a letter: ").lower()
+    if len(guessed_letters) != 1:
+        print("Please enter 1 letter at a time")
+
 
 
 welcome_screen()
