@@ -14,5 +14,20 @@ def welcome_screen():
         Let's see if you can escape The Hangman's stage!
         """
         )
+    
+    play_game = input("Would you like to play Hangman:\n ")
+    if play_game == "y":
+        run_game()
+    elif play_game == "n":
+        end_game()
+    else:
+        print("Please enter a valid selection")
+
+def run_game():
+    """
+    Will start the game if the user enters 'y' on the welcome screen.
+    """
+    print("Game running")
 
 welcome_screen()
+
