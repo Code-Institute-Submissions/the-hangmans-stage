@@ -15,7 +15,7 @@ def welcome_screen():
         """
         )
     
-    play_game = input("Would you like to play Hangman:\n ").lower()
+    play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no: \n ").lower()
     if play_game == "y":
         run_game()
     elif play_game == "n":
@@ -37,13 +37,24 @@ def run_game():
     """
     word = get_word(words)
     secret = "_" * len(word)
-    print(secret)
+    print(f" guess the word: {secret}")
     already_guessed = []
     lives_left = 6
-    guessed_letters = input("Please guess a letter: ").lower()
-    if len(guessed_letters) != 1:
-        print("Please enter 1 letter at a time")
-
-
+    while lives_left > 0:
+        guessed_letter = input("Please guess a letter: ").lower()
+        if len(guessed_letter) == 1 and guessed_letter.isalpha():
+            if guessed_letter in already_guessed:
+                print(f"You have already guessed that letter")
+                print(f"Used letters: {already_guessed}")
+                already_guessed.append(guessed_letter)
+            elif guessed_letter not in word:
+                print(f"Sorry, {guessed_letter} is not in the secret word.")
+                already_guessed.append(guessed_letter)
+                lives_left -= 1
+                print(f"You have {lives_left} lives left")
+            else:
+                already_guessed.append(guessed_letter)
+                print(f"Congrats, {guessed_letter} is in the secret word")
+        
 
 welcome_screen()
