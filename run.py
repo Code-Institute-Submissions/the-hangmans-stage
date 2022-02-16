@@ -10,20 +10,21 @@ def welcome_screen():
     print(f"Hi {player_name}, welcome to Hangman.")
     print(
         """
-        The rules of the game are simple. Guessing 1 letter at a time, you have 6 lives to guess The Hangman's secret word.
+        The rules of the game are simple. Guessing 1 letter at a time,
+        you have 6 lives to guess The Hangman's secret word.
         Let's see if you can escape The Hangman's stage!
         """
         )
-    
-    play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no: \n ").lower()
-    if play_game == "y":
-        run_game()
-    elif play_game == "n":
-        end_game()
-    else:
-        print("Please enter a valid selection")
+    while True:
+        play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no: \n ").lower()
+        if play_game == "y":
+            run_game()
+        elif play_game == "n":
+            end_game()
+        else:
+            print("Please enter a valid selection")
 
-def get_word(words):
+def get_word(choice):
     """
     Will randomly select a word from words.py for the player to guess.
     """
