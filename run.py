@@ -1,27 +1,13 @@
 import random
-from words import words, superheroes, cartoons
+from words import words
 
 def welcome_screen():
     """
     This is the home screen and will take the players username
     and welcome them to the game.
     """
-    #player_name = input("Please enter your username:\n ")
-    #print(f"Hi {player_name}, welcome to Hangman.")
-    print(
-        """
-        
-  _______ _            _    _                                         
- |__   __| |          | |  | |                                        
-    | |  | |__   ___  | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
-    | |  | '_ \ / _ \ |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-    | |  | | | |  __/ | |  | | (_| | | | | (_| | | | | | | (_| | | | |
-    |_|  |_| |_|\___| |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                                           __/ |                      
-                                          |___/                       
-
-        """        
-    )
+    player_name = input("Please enter your username:\n ")
+    print(f"Hi {player_name}, welcome to Hangman.")
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -30,9 +16,7 @@ def welcome_screen():
         """
         )
     while True:
-        play_game = input(
-            "Would you like to play Hangman? Enter 'y' for yes and 'n' for no: \n "
-        ).lower()
+        play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no: \n ").lower()
         if play_game == "y":
             run_game()
         elif play_game == "n":
@@ -47,9 +31,6 @@ def get_word(choice):
     word = random.choice(words)
     return word
 
-def end_game():
-    print("hello")
-
 
 def run_game():
     """
@@ -63,11 +44,6 @@ def run_game():
     lives_left = 6
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for letter in word]
-        if "_" not in word_list:
-            end_game()
-            print("Congratulations, you guessed the word")
-            print(f"The Hangman's secret word was '{word}'")
-            break
         print(word_list)
         print('Current word: ', ' '.join(word_list))
         guessed_letter = input("Please guess a letter: ").lower()
@@ -88,10 +64,12 @@ def run_game():
             print("Please enter 1 letter at a time")
         else:
             print("You entered an invalid character!")
+    #if "_" not in word_list:
+    #    print("You have failed to escape The Hangman")
+    #    print(f"The Hangman's secret word was '{word}'")
+    #else:
+    #    print(f"Well done, you guessed {word} was The Hangman's secret word and managed to escape")
+        
+        
 
 welcome_screen()
-
-#def end_game():
-#    print("hello")
-#    #break
-
