@@ -1,5 +1,5 @@
 import random
-from words import superheroes
+from words import superheroes, words, cartoons
 
 def welcome_screen():
     """
@@ -29,24 +29,23 @@ def get_theme():
         print("Please choose a theme of secret words")
         print("1 - Superheroes")
         print("2 - Cartoons")
+        print("3 - anything goes")
         theme = input(" \n")
         if theme == "1":
-            return superheroes
-            run_game()
-
-def get_word(choice):
-    """
-    Will randomly select a word from words.py for the player to guess.
-    """
-    word = random.choice(word)
-    return word
-
+            word = random.choice(superheroes)
+            run_game(word)
+        if theme == "2":
+            word = random.choice(cartoons)
+            run_game(word)
+        if theme == "3":
+            word = random.choice(word)
+            run_game(word)
 
 def run_game(word):
     """
     Will start the game if the user enters 'y' on the welcome screen.
     """
-    word = get_word(get_theme())
+    #word = get_word(get_theme())
     secret = "_" * len(word)
     print(f" guess the word: {secret}")
     print(word)
