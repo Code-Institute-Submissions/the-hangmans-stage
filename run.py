@@ -28,9 +28,21 @@ def end_game():
     print("Thank you for playing Hangman")
     welcome_screen()
 
+def continue_game():
+    print("Would you like to continue playing?")
+    print("y - Continue playing")
+    print("n - Exit Game")
+    replay = input(" \n").lower()
+    if replay == "y":
+        get_theme()
+    elif replay == "n":
+        end_game()
+    else:
+        print("Please enter a valid selection")
+
 def get_theme():
-    player_name = input("Please enter your username:\n ")
-    print(f"Hi {player_name}, welcome to Hangman.")
+    #player_name = input("Please enter your username:\n ")
+    print(f"Hi, welcome to Hangman.")
     while True:
         print("Please choose a theme of secret words")
         print("1 - Superheroes")
@@ -40,12 +52,14 @@ def get_theme():
         if theme == "1":
             word = random.choice(superheroes)
             run_game(word)
-        if theme == "2":
+        elif theme == "2":
             word = random.choice(cartoons)
             run_game(word)
-        if theme == "3":
+        elif theme == "3":
             word = random.choice(word)
             run_game(word)
+        else:
+            print("Please choose a valid theme")
 
 def run_game(word):
     """
@@ -61,7 +75,7 @@ def run_game(word):
         if "_" not in word_list:
             print("You have failed to escape The Hangman")
             print(f"The Hangman's secret word was '{word}'")
-            break
+            continue_game()
         print(word_list)
         print('Current word: ', ' '.join(word_list))
         guessed_letter = input("Please guess a letter: ").lower()
