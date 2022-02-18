@@ -6,8 +6,8 @@ def welcome_screen():
     This is the home screen and will take the players username
     and welcome them to the game.
     """
-    player_name = input("Please enter your username:\n ")
-    print(f"Hi {player_name}, welcome to Hangman.")
+    #player_name = input("Please enter your username:\n ")
+    #print(f"Hi {player_name}, welcome to Hangman.")
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -24,7 +24,13 @@ def welcome_screen():
         else:
             print("Please enter a valid selection")
 
+def end_game():
+    print("Thank you for playing Hangman")
+    welcome_screen()
+
 def get_theme():
+    player_name = input("Please enter your username:\n ")
+    print(f"Hi {player_name}, welcome to Hangman.")
     while True:
         print("Please choose a theme of secret words")
         print("1 - Superheroes")
@@ -45,7 +51,6 @@ def run_game(word):
     """
     Will start the game if the user enters 'y' on the welcome screen.
     """
-    #word = get_word(get_theme())
     secret = "_" * len(word)
     print(f" guess the word: {secret}")
     print(word)
@@ -53,6 +58,10 @@ def run_game(word):
     lives_left = 6
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for letter in word]
+        if "_" not in word_list:
+            print("You have failed to escape The Hangman")
+            print(f"The Hangman's secret word was '{word}'")
+            break
         print(word_list)
         print('Current word: ', ' '.join(word_list))
         guessed_letter = input("Please guess a letter: ").lower()
