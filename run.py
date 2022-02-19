@@ -16,7 +16,7 @@ def welcome_screen():
         """
         )
     while True:
-        play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no: \n ").lower()
+        play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no:\n").lower()
         if play_game == "y":
             get_theme()
         elif play_game == "n":
@@ -32,7 +32,7 @@ def continue_game():
     print("Would you like to continue playing?")
     print("y - Continue playing")
     print("n - Exit Game")
-    replay = input(" \n").lower()
+    replay = input("\n").lower()
     if replay == "y":
         get_theme()
     elif replay == "n":
@@ -48,7 +48,7 @@ def get_theme():
         print("1 - Superheroes")
         print("2 - Cartoons")
         print("3 - anything goes")
-        theme = input(" \n")
+        theme = input("\n")
         if theme == "1":
             word = random.choice(superheroes)
             run_game(word)
@@ -78,7 +78,7 @@ def run_game(word):
             continue_game()
         print(word_list)
         print('Current word: ', ' '.join(word_list))
-        guessed_letter = input("Please guess a letter: ").lower()
+        guessed_letter = input("Please guess a letter:\n").lower()
         if len(guessed_letter) == 1 and guessed_letter.isalpha():
             if guessed_letter in already_guessed:
                 print("You have already guessed that letter")
