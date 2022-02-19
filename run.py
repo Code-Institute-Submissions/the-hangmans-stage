@@ -8,6 +8,7 @@ def welcome_screen():
     """
     #player_name = input("Please enter your username:\n ")
     #print(f"Hi {player_name}, welcome to Hangman.")
+    print(title_message())
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -101,7 +102,32 @@ def run_game(word):
     #    print(f"The Hangman's secret word was '{word}'")
     #else:
     #    print(f"Well done, you guessed {word} was The Hangman's secret word and managed to escape")
+
+def title_message():
+    print(
+        """
         
-        
+ ______  __ __    ___      __ __   ____  ____    ____  ___ ___   ____  ____   __  _____
+|      ||  |  |  /  _]    |  |  | /    ||    \  /    ||   |   | /    ||    \ |  |/ ___/
+|      ||  |  | /  [_     |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  ||_ (   \_ 
+|_|  |_||  _  ||    _]    |  _  ||     ||  |  ||  |  ||  \_/  ||     ||  |  |  \|\__  |
+  |  |  |  |  ||   [_     |  |  ||  _  ||  |  ||  |_ ||   |   ||  _  ||  |  |    /  \ |
+  |  |  |  |  ||     |    |  |  ||  |  ||  |  ||     ||   |   ||  |  ||  |  |    \    |
+  |__|  |__|__||_____|    |__|__||__|__||__|__||___,_||___|___||__|__||__|__|     \___|
+"""
+    )
+    print(
+        """
+  _____ ______   ____   ____    ___ 
+ / ___/|      | /    | /    |  /  _]
+(   \_ |      ||  o  ||   __| /  [_ 
+ \__  ||_|  |_||     ||  |  ||    _]
+ /  \ |  |  |  |  _  ||  |_ ||   [_ 
+ \    |  |  |  |  |  ||     ||     |
+  \___|  |__|  |__|__||___,_||_____|
+                                    
+"""
+    )
+    
 
 welcome_screen()
