@@ -74,8 +74,10 @@ def run_game(word):
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for letter in word]
         if "_" not in word_list:
-            print("You have failed to escape The Hangman")
+            #print(win_message())
+            print("Congratulations, you have guessed The hangman's secret word")
             print(f"The Hangman's secret word was '{word}'")
+            print("Will you risk another go?")
             continue_game()
         print(word_list)
         print('Current word: ', ' '.join(word_list))
@@ -97,16 +99,15 @@ def run_game(word):
             print("Please enter 1 letter at a time")
         else:
             print("You entered an invalid character!")
-    #if "_" not in word_list:
-    #    print("You have failed to escape The Hangman")
-    #    print(f"The Hangman's secret word was '{word}'")
-    #else:
-    #    print(f"Well done, you guessed {word} was The Hangman's secret word and managed to escape")
+
 
 def title_message():
+    """
+    This is the welcome screen title graphic.
+    It is displayed only on the initial startup of the game.
+    """
     print(
-        """
-        
+        f"""
  __ __   ____  ____    ____  ___ ___   ____  ____  
 |  |  | /    ||    \  /    ||   |   | /    ||    \ 
 |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
@@ -114,9 +115,34 @@ def title_message():
 |  |  ||  _  ||  |  ||  |_ ||   |   ||  _  ||  |  |
 |  |  ||  |  ||  |  ||     ||   |   ||  |  ||  |  |
 |__|__||__|__||__|__||___,_||___|___||__|__||__|__|
-                                                   
-"""
+""")
+
+def win_message():
+    print(
+        """
+
+               /$$          
+              |__/          
+ /$$  /$$  /$$ /$$ /$$$$$$$ 
+| $$ | $$ | $$| $$| $$__  $$
+| $$ | $$ | $$| $$| $$  \ $$
+| $$ | $$ | $$| $$| $$  | $$
+|  $$$$$/$$$$/| $$| $$  | $$
+ \_____/\___/ |__/|__/  |__/
+    """
     )
-    
+
+def lose_message():
+    print(
+        """.git/
+   _____   _____     __   __      
+ /\_____\ /\___/\   /\_\ /\_\     
+( (  ___// / _ \ \  \/_/( ( (     
+ \ \ \_  \ \(_)/ /   /\_\\ \_\    
+ / / /_\ / / _ \ \  / / // / /__  
+/ /____/( (_( )_) )( (_(( (_____( 
+\/_/     \/_/ \_\/  \/_/ \/_____/ 
+        """
+    )
 
 welcome_screen()
