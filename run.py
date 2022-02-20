@@ -8,7 +8,7 @@ def welcome_screen():
     """
     #player_name = input("Please enter your username:\n ")
     #print(f"Hi {player_name}, welcome to Hangman.")
-    print(title_message())
+    title_message()
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -74,7 +74,7 @@ def run_game(word):
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for letter in word]
         if "_" not in word_list:
-            print(win_message())
+            win_message()
             print("Congratulations, you have guessed The hangman's secret word")
             print(f"The Hangman's secret word was '{word}'")
             print("Will you risk another go?")
@@ -100,7 +100,7 @@ def run_game(word):
         else:
             print("You entered an invalid character!")
     if lives_left == 0:
-        print(lose_message())
+        lose_message()
         print("You failed to guess The hangman's secret word")
         print(f"The Hangman's secret word was '{word}'")
 
