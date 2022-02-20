@@ -74,7 +74,7 @@ def run_game(word):
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for letter in word]
         if "_" not in word_list:
-            #print(win_message())
+            print(win_message())
             print("Congratulations, you have guessed The hangman's secret word")
             print(f"The Hangman's secret word was '{word}'")
             print("Will you risk another go?")
@@ -99,6 +99,10 @@ def run_game(word):
             print("Please enter 1 letter at a time")
         else:
             print("You entered an invalid character!")
+    if lives_left == 0:
+        print(lose_message())
+        print("You failed to guess The hangman's secret word")
+        print(f"The Hangman's secret word was '{word}'")
 
 
 def title_message():
@@ -134,7 +138,7 @@ def win_message():
 
 def lose_message():
     print(
-        """.git/
+        """
    _____   _____     __   __      
  /\_____\ /\___/\   /\_\ /\_\     
 ( (  ___// / _ \ \  \/_/( ( (     
@@ -142,7 +146,7 @@ def lose_message():
  / / /_\ / / _ \ \  / / // / /__  
 / /____/( (_( )_) )( (_(( (_____( 
 \/_/     \/_/ \_\/  \/_/ \/_____/ 
-        """
+"""
     )
 
 welcome_screen()
