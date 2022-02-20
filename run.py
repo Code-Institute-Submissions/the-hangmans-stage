@@ -9,6 +9,7 @@ def welcome_screen():
     #player_name = input("Please enter your username:\n ")
     #print(f"Hi {player_name}, welcome to Hangman.")
     title_graphic()
+    print(f"Hi, welcome to The Hangman's Stage!")
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -18,6 +19,7 @@ def welcome_screen():
         )
     while True:
         play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no:\n").lower()
+        print("")
         if play_game == "y":
             get_theme()
         elif play_game == "n":
@@ -30,7 +32,7 @@ def end_game():
     welcome_screen()
 
 def continue_game():
-    print("Would you like to continue playing?")
+    print("Would you like to continue playing?\n")
     print("y - Continue playing")
     print("n - Exit Game")
     replay = input("\n").lower()
@@ -43,9 +45,8 @@ def continue_game():
 
 def get_theme():
     #player_name = input("Please enter your username:\n ")
-    print(f"Hi, welcome to Hangman.")
     while True:
-        print("Please choose a theme of secret words")
+        print("Please choose a theme for your secret word\n")
         print("1 - Superheroes")
         print("2 - Cartoons")
         print("3 - anything goes")
@@ -57,7 +58,7 @@ def get_theme():
             word = random.choice(cartoons)
             run_game(word)
         elif theme == "3":
-            word = random.choice(word)
+            word = random.choice(words)
             run_game(word)
         else:
             print("Please choose a valid theme")
@@ -149,5 +150,7 @@ def lose_graphic():
 \/_/     \/_/ \_\/  \/_/ \/_____/ 
 """
     )
+
+
 
 welcome_screen()
