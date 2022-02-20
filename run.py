@@ -8,7 +8,7 @@ def welcome_screen():
     """
     #player_name = input("Please enter your username:\n ")
     #print(f"Hi {player_name}, welcome to Hangman.")
-    title_message()
+    title_graphic()
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -74,7 +74,7 @@ def run_game(word):
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for letter in word]
         if "_" not in word_list:
-            win_message()
+            win_graphic()
             print("Congratulations, you have guessed The hangman's secret word")
             print(f"The Hangman's secret word was '{word}'")
             print("Will you risk another go?")
@@ -100,18 +100,19 @@ def run_game(word):
         else:
             print("You entered an invalid character!")
     if lives_left == 0:
-        lose_message()
+        lose_graphic()
         print("You failed to guess The hangman's secret word")
         print(f"The Hangman's secret word was '{word}'")
+        continue_game()
 
 
-def title_message():
+def title_graphic():
     """
     This is the welcome screen title graphic.
     It is displayed only on the initial startup of the game.
     """
     print(
-        f"""
+        """
  __ __   ____  ____    ____  ___ ___   ____  ____  
 |  |  | /    ||    \  /    ||   |   | /    ||    \ 
 |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
@@ -121,7 +122,7 @@ def title_message():
 |__|__||__|__||__|__||___,_||___|___||__|__||__|__|
 """)
 
-def win_message():
+def win_graphic():
     print(
         """
 
@@ -136,7 +137,7 @@ def win_message():
     """
     )
 
-def lose_message():
+def lose_graphic():
     print(
         """
    _____   _____     __   __      
