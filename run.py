@@ -13,7 +13,7 @@ def welcome_screen():
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
-        you have 6 lives to guess The Hangman's secret word.
+        you have 6 lives to guess The Hangman's secret word and survive.
         Let's see if you can escape The Hangman's stage!
         """
         )
