@@ -17,7 +17,8 @@ def welcome_screen():
         """
         )
     while True:
-        play_game = input("Would you like to play Hangman? Enter 'y' for yes and 'n' for no:\n").lower()
+        print("Would you like to play Hangman?")
+        play_game = input("Enter 'y' for yes and 'n' for no:\n").lower()
         print("")
         if play_game == "y":
             get_theme()
