@@ -7,8 +7,6 @@ def welcome_screen():
     This is the home screen and will take the players username
     and welcome them to the game.
     """
-    #player_name = input("Please enter your username:\n ")
-    #print(f"Hi {player_name}, welcome to Hangman.")
     title_graphic()
     print(f"Hi, welcome to The Hangman's Stage!")
     print(
