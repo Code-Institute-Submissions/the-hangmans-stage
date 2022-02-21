@@ -8,7 +8,7 @@ def welcome_screen():
     and welcome them to the game.
     """
     title_graphic()
-    print(f"Hi, welcome to The Hangman's Stage!")
+    print("Hi, welcome to The Hangman's Stage!")
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
@@ -78,10 +78,11 @@ def run_game(word):
     already_guessed = []
     lives_left = 6
     while lives_left > 0:
-        word_list = [letter if letter in already_guessed else '_' for letter in word]
+        word_list = [letter if letter in already_guessed else '_' for
+                     letter in word]
         if "_" not in word_list:
             win_graphic()
-            print("Congratulations, you have guessed The hangman's secret word")
+            print("Congratulations, you guessed The hangman's secret word")
             print(f"The Hangman's secret word was '{word}'")
             print("Will you risk another go?")
             continue_game()
@@ -91,7 +92,6 @@ def run_game(word):
         if len(guessed_letter) == 1 and guessed_letter.isalpha():
             if guessed_letter in already_guessed:
                 print("You have already guessed that letter")
-                
                 already_guessed.append(guessed_letter)
             elif guessed_letter not in word:
                 print(f"Sorry, {guessed_letter} is not in the secret word.")
@@ -121,8 +121,8 @@ def title_graphic():
     """
     print(
         """
- __ __   ____  ____    ____  ___ ___   ____  ____  
-|  |  | /    ||    \  /    ||   |   | /    ||    \ 
+ __ __   ____  ____    ____  ___ ___   ____  ____
+|  |  | /    ||    \  /    ||   |   | /    ||    \\
 |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
 |  _  ||     ||  |  ||  |  ||  \_/  ||     ||  |  |
 |  |  ||  _  ||  |  ||  |_ ||   |   ||  _  ||  |  |
@@ -135,9 +135,9 @@ def win_graphic():
     print(
         """
 
-               /$$          
-              |__/          
- /$$  /$$  /$$ /$$ /$$$$$$$ 
+               /$$
+              |__/
+ /$$  /$$  /$$ /$$ /$$$$$$$
 | $$ | $$ | $$| $$| $$__  $$
 | $$ | $$ | $$| $$| $$  \ $$
 | $$ | $$ | $$| $$| $$  | $$
@@ -150,13 +150,13 @@ def win_graphic():
 def lose_graphic():
     print(
         """
-   _____   _____     __   __      
- /\_____\ /\___/\   /\_\ /\_\     
-( (  ___// / _ \ \  \/_/( ( (     
- \ \ \_  \ \(_)/ /   /\_\\ \_\    
- / / /_\ / / _ \ \  / / // / /__  
-/ /____/( (_( )_) )( (_(( (_____( 
-\/_/     \/_/ \_\/  \/_/ \/_____/ 
+   _____   _____     __   __
+ /\_____\ /\___/\   /\_\ /\_\\
+( (  ___// / _ \ \  \/_/( ( (
+ \ \ \_  \ \(_)/ /   /\_\\ \_\\
+ / / /_\ / / _ \ \  / / // / /__
+/ /____/( (_( )_) )( (_(( (_____(
+\/_/     \/_/ \_\/  \/_/ \/_____/
 """
     )
 
@@ -181,7 +181,7 @@ def hangman_lives(lives_left):
            |     O
            |    /|\\
            |     |
-           |    / 
+           |    /
            |
          __|\_______
         |           |
@@ -193,7 +193,7 @@ def hangman_lives(lives_left):
            |     O
            |    /|\\
            |     |
-           |  
+           |
            |
          __|\_______
         |           |
@@ -205,7 +205,7 @@ def hangman_lives(lives_left):
            |     O
            |    /|
            |     |
-           |   
+           |
            |
          __|\_______
         |           |
@@ -217,7 +217,7 @@ def hangman_lives(lives_left):
            |     O
            |     |
            |     |
-           |  
+           |
            |
          __|\_______
         |           |
@@ -227,9 +227,9 @@ def hangman_lives(lives_left):
             ======
            |/    |
            |     O
-           |  
-           |    
-           |  
+           |
+           |
+           |
            |
          __|\_______
         |           |
@@ -238,10 +238,10 @@ def hangman_lives(lives_left):
         """
             ======
            |/    |
-           |    
-           |  
-           |    
-           |  
+           |
+           |
+           |
+           |
            |
          __|\_______
         |           |
