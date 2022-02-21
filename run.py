@@ -100,6 +100,7 @@ def run_game(word):
             print("Please enter 1 letter at a time")
         else:
             print("You entered an invalid character!")
+        print(hangman_lives(lives_left))
     if lives_left == 0:
         lose_graphic()
         print("You failed to guess The hangman's secret word")
@@ -150,6 +151,95 @@ def lose_graphic():
 \/_/     \/_/ \_\/  \/_/ \/_____/ 
 """
     )
+
+def hangman_lives(lives_left):
+    hanging_stages = [
+        """
+            ======
+           |/   |
+           |    O
+           |   /|\\
+           |    |
+           |   / \\
+           |
+         __|\_______
+        |           |
+        |___________|
+        """,
+        """
+            ======
+           |/   |
+           |    O
+           |   /|\\
+           |    |
+           |   / 
+           |
+         __|\_______
+        |           |
+        |___________|
+        """,
+        """
+            ======
+           |/   |
+           |    O
+           |   /|\\
+           |    |
+           |  
+           |
+         __|\_______
+        |           |
+        |___________|
+        """,
+        """
+            ======
+           |/   |
+           |    O
+           |   /|
+           |    |
+           |  
+           |
+         __|\_______
+        |           |
+        |___________|
+        """,
+        """
+            ======
+           |/   |
+           |    O
+           |    |
+           |    |
+           |  
+           |
+         __|\_______
+        |           |
+        |___________|
+        """,
+        """
+            ======
+           |/   |
+           |    O
+           |  
+           |    
+           |  
+           |
+         __|\_______
+        |           |
+        |___________|
+        """,
+        """
+            ======
+           |/   |
+           |    
+           |  
+           |    
+           |  
+           |
+         __|\_______
+        |           |
+        |___________|
+        """
+    ]
+    return hanging_stages[lives_left]
 
 
 
