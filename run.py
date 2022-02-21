@@ -1,6 +1,7 @@
 import random
 from words import superheroes, words, cartoons
 
+
 def welcome_screen():
     """
     This is the home screen and will take the players username
@@ -27,9 +28,11 @@ def welcome_screen():
         else:
             print("Please enter a valid selection")
 
+
 def end_game():
     print("Thank you for playing Hangman")
     welcome_screen()
+
 
 def continue_game():
     print("Would you like to continue playing?\n")
@@ -42,6 +45,7 @@ def continue_game():
         end_game()
     else:
         print("Please enter a valid selection")
+
 
 def get_theme():
     #player_name = input("Please enter your username:\n ")
@@ -64,6 +68,7 @@ def get_theme():
             run_game(word)
         else:
             print("Please choose a valid theme")
+
 
 def run_game(word):
     """
@@ -127,6 +132,7 @@ def title_graphic():
 |__|__||__|__||__|__||___,_||___|___||__|__||__|__|
 """)
 
+
 def win_graphic():
     print(
         """
@@ -142,6 +148,7 @@ def win_graphic():
     """
     )
 
+
 def lose_graphic():
     print(
         """
@@ -154,6 +161,7 @@ def lose_graphic():
 \/_/     \/_/ \_\/  \/_/ \/_____/ 
 """
     )
+
 
 def hangman_lives(lives_left):
     hanging_stages = [
@@ -243,7 +251,6 @@ def hangman_lives(lives_left):
         """
     ]
     return hanging_stages[lives_left]
-
 
 
 welcome_screen()
