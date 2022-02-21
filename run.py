@@ -59,6 +59,8 @@ def get_theme():
             run_game(word)
         elif theme == "3":
             word = random.choice(words)
+            while "-" in word or " " in word:
+                word = random.choice(words)
             run_game(word)
         else:
             print("Please choose a valid theme")
@@ -86,7 +88,7 @@ def run_game(word):
         if len(guessed_letter) == 1 and guessed_letter.isalpha():
             if guessed_letter in already_guessed:
                 print("You have already guessed that letter")
-                print(f"Used letters: {already_guessed}")
+                
                 already_guessed.append(guessed_letter)
             elif guessed_letter not in word:
                 print(f"Sorry, {guessed_letter} is not in the secret word.")
@@ -100,6 +102,7 @@ def run_game(word):
             print("Please enter 1 letter at a time")
         else:
             print("You entered an invalid character!")
+        print("Used letters: " + ", ".join(already_guessed) + "\n")
         print(hangman_lives(lives_left))
     if lives_left == 0:
         lose_graphic()
