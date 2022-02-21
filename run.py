@@ -46,7 +46,6 @@ def continue_game():
 
 
 def get_theme():
-    #player_name = input("Please enter your username:\n ")
     while True:
         print("Please choose a theme for your secret word\n")
         print("1 - Superheroes")
