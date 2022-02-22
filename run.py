@@ -30,7 +30,7 @@ def welcome_screen():
 
 def end_game():
     print("Thank you for playing Hangman")
-    welcome_screen()
+    exit()
 
 
 def continue_game():
@@ -39,14 +39,14 @@ def continue_game():
     print("n - Exit Game")
     replay = input("\n").lower()
     if replay == "y":
-        get_theme()
+        select_theme()
     elif replay == "n":
         end_game()
     else:
         print("Please enter a valid selection")
 
 
-def get_theme():
+def select_theme():
     while True:
         print("Please choose a theme for your secret word\n")
         print("1 - Superheroes")
