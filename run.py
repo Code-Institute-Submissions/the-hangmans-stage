@@ -5,14 +5,15 @@ from words import superheroes, words, cartoons
 def welcome_screen():
     """
     This is the games home screen, it displays the title graphic,
-    welcomes them to the game and explain the rules.
+    welcomes players to the game and explain the rules.
     """
     title_graphic()
     print("Hi, welcome to The Hangman's Stage!")
     print(
         """
         The rules of the game are simple. Guessing 1 letter at a time,
-        you have 6 lives to guess The Hangman's secret word and survive.
+        you have to guess The Hangman's secret word and survive.
+        You can play with 6 lives or risk playing with 3!
         Let's see if you can escape The Hangman's stage!
         """
         )
@@ -32,7 +33,7 @@ def end_game():
     """
     This function thanks the user for playing and then exits the game.
     """
-    print("Thank you for playing Hangman")
+    print("Thank you for playing The Hangman's Stage")
     exit()
 
 
@@ -91,7 +92,7 @@ def run_game(word):
     secret = "_" * len(word)
     print(f" guess the word: {secret}")
     print(word)
-    already_guessed = []
+    guesses = []
     lives_left = 0
     print(
         """
@@ -110,8 +111,7 @@ def run_game(word):
         else:
             print("Please enter '6' for 6 lives or '3' for 3 lives")
     while lives_left > 0:
-        word_list = [letter if letter in already_guessed else '_' for
-                     letter in word]
+        word_list = [letter if letter in guesses else '_' for letter in word]
         if "_" not in word_list:
             win_graphic()
             print(
@@ -126,22 +126,22 @@ def run_game(word):
         print('Current word: ', ' '.join(word_list))
         guessed_letter = input("Please guess a letter:\n").lower()
         if len(guessed_letter) == 1 and guessed_letter.isalpha():
-            if guessed_letter in already_guessed:
+            if guessed_letter in guesses:
                 print("You have already guessed that letter")
-                already_guessed.append(guessed_letter)
+                guesses.append(guessed_letter)
             elif guessed_letter not in word:
                 print(f"Sorry, {guessed_letter} is not in the secret word.")
-                already_guessed.append(guessed_letter)
+                guesses.append(guessed_letter)
                 lives_left -= 1
                 print(f"You have {lives_left} lives left")
             else:
-                already_guessed.append(guessed_letter)
+                guesses.append(guessed_letter)
                 print(f"Congrats, {guessed_letter} is in the secret word")
         elif len(guessed_letter) != 1:
             print("Please enter 1 letter at a time")
         else:
             print("You entered an invalid character! Pick a letter from a - z")
-        print("Used letters: " + ", ".join(already_guessed) + "\n")
+        print("Used letters: " + ", ".join(guesses) + "\n")
         print(hangman_lives(lives_left))
     if lives_left == 0:
         lose_graphic()
