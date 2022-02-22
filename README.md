@@ -49,3 +49,16 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 This project has been created using Python. Any other technologies present such as javascript are part of the Code Institute template used to create this project.
 I have run the python code through the [PEP8 Validator](http://pep8online.com/) which resulted in no errors.
 
+## **Bugs**
+
+1.  **Intended Outcome** - ASCII Art to be used for graphics
+    * ***Issue Found***
+        * The backslashes present in the ASCII Art used for my title, win and fail graphics would cause these graphics to be printed out incorrectly. These would appear blue in the code
+    * ***Solution***
+        * To resolve this, I had to use double backslashes wherever a blue backslash was present.
+
+2. **Intended Outcome** - Incorrect Input to not break out of code loop when choosing theme
+    * ***Issue Found***
+        * If the player input and invalid option at the chose theme stage, the game would fall out of the loop.
+    * ***Solution***
+        * Added a while True statement to this stage.
