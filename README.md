@@ -34,3 +34,8 @@ The player is given 6 lives at the start of the game. Each incorrect answer is v
 **Correctly Or Incorrectly Guessing The Word**
 
 If the player manages to correctly guess the word within their 6 lives, they're presented with a congratulatory message and asked if they would like to continue playing. On the other hand, if the player fails to guess the word, they're presented with a fail message and again asked if they would like to continue playing.
+
+## **Possible Future Features**
+
+* A timer feature, so the player is not only playing against the 6 lives but also timing out will result in a failure.
+* Difficulty levels, with increased or decreased number of lives. This was a feature I did look at implementing, and had working in part but ran out of time to finish.
