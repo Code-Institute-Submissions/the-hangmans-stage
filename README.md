@@ -39,3 +39,7 @@ If the player manages to correctly guess the word within their 6 lives, they're 
 
 * A timer feature, so the player is not only playing against the 6 lives but also timing out will result in a failure.
 * Difficulty levels, with increased or decreased number of lives. This was a feature I did look at implementing, and had working in part but ran out of time to finish.
+
+## **Testing**
+
+The game has been deployed using Heroku and runs in a command line Python Terminal. I've tested the site using Chrome, Firefox and Edge browsers on PC and also on mobile using Chrome. I tried to cause the code to crash at various points using incorrect inputs to try and make the code break it's loop. Thankfully any incorrect inputs result in an error message and ask for a valid input.

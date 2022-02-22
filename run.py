@@ -85,7 +85,7 @@ def run_game(word):
             print(
                 f"""
                 Congratulations, you guessed The hangman's secret word.
-                The Hangman's secret word was '{word}'
+                The Hangman's secret word was '{word}'.
                 You have escaped The Hangmans's stage for now!
                 Will you risk another go?\n
                 """)
