@@ -193,6 +193,12 @@ def lose_graphic():
 
 
 def hangman_lives(lives_left):
+    """
+    These graphics represent the players lives and are looped through
+    dependent on the amount of lives the player has left. It takes the
+    argument lives_left to run through the index and display the right
+    graphic."
+    """
     hanging_stages = [
         """
             ======
