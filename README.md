@@ -16,10 +16,18 @@ The title screen welcomes players to the site, explains the rules and asks the p
 
 Once the user has input "y" to play the game, they're presented with a list of theme's to choose for the secret word.
 
-### **Game Play Screens***
+### **Game Play**
 
-#### **The secret word**
+**The secret word**
 
 The secret word is presented to user with a series of underscores which match the length of the secret word.
 
 As the player guesses letters thee letter is appended to a list of used characters which is then printed so the player is aware of letters they have already guessed. If the letter is in the secret word then that letters underscore is replaced by the letter.
+
+**Invalid Selections**
+
+If the player inputs an invalid selection, such as too many letters, numbers or a letter than have already entered, they're presented with an error message.
+
+**Hanging Stages**
+
+The player is given 6 lives at the start of the game. Each incorrect answer is visally represented with a hangman graphic. Each of the 6 lives is associated with a body part: head, torso, left arm, right arm, left leg and right leg.
