@@ -43,3 +43,9 @@ If the player manages to correctly guess the word within their 6 lives, they're 
 ## **Testing**
 
 The game has been deployed using Heroku and runs in a command line Python Terminal. I've tested the site using Chrome, Firefox and Edge browsers on PC and also on mobile using Chrome. I tried to cause the code to crash at various points using incorrect inputs to try and make the code break it's loop. Thankfully any incorrect inputs result in an error message and ask for a valid input.
+
+## **Technologies Used**
+
+This project has been created using Python. Any other technologies present such as javascript are part of the Code Institute template used to create this project.
+I have run the python code through the [PEP8 Validator](http://pep8online.com/) which resulted in no errors.
+
