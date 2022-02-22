@@ -92,7 +92,23 @@ def run_game(word):
     print(f" guess the word: {secret}")
     print(word)
     already_guessed = []
-    lives_left = 6
+    lives_left = 0
+    print(
+        """
+        Are you up for a challenge? You can chose to play 6 lives as normal,
+        or take a risk and play with 3!
+        """)
+    print("")
+    print("Enter 6 for 6 lives")
+    print("Enter 3 for 3 lives")
+    while lives_left == 0:
+        lives = input("\n")
+        if lives == "6":
+            lives_left = 6
+        elif lives == "3":
+            lives_left = 3
+        else:
+            print("Please choose a valid option")
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for
                      letter in word]
