@@ -37,6 +37,11 @@ def end_game():
 
 
 def continue_game():
+    """
+    This function is displayed after the player has successfuly
+    or unsuccessfuly guessed the secret word. It allows the player
+    to continue playing or exit the game.
+    """
     print("Would you like to continue playing?\n")
     print("y - Continue playing")
     print("n - Exit Game")
