@@ -29,6 +29,9 @@ def welcome_screen():
 
 
 def end_game():
+    """
+    This function thanks the user for playing and then exits the game.
+    """
     print("Thank you for playing Hangman")
     exit()
 
