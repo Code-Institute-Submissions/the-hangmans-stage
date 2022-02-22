@@ -155,6 +155,10 @@ def title_graphic():
 
 
 def win_graphic():
+    """
+    This is the graphic displayed when the player successfuly guesses
+    the secret word.
+    """
     print(
         """
 
@@ -171,6 +175,10 @@ def win_graphic():
 
 
 def lose_graphic():
+    """
+    This is the graphic displayed when the player has used all their lives
+    and failed to guessthe secret word.
+    """
     print(
         """
    _____   _____     __   __
