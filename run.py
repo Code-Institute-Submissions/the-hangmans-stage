@@ -21,7 +21,7 @@ def welcome_screen():
         play_game = input("Enter 'y' for yes and 'n' for no:\n").lower()
         print("")
         if play_game == "y":
-            get_theme()
+            select_theme()
         elif play_game == "n":
             end_game()
         else:
@@ -82,7 +82,11 @@ def select_theme():
 
 def run_game(word):
     """
-    Will start the game if the user enters 'y' on the welcome screen.
+    Will start the game if the user enters 'y' on the welcome screen
+    and has choosen a theme for their secret word. It takes the arguement
+    'word' to use a word for the player to guess. It displays underscores
+    for the length of the secret word and replaces these with correctly
+    guessed letters. Incorrect guesses display the hanging stages.
     """
     secret = "_" * len(word)
     print(f" guess the word: {secret}")
