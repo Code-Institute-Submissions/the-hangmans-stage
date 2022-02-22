@@ -25,7 +25,7 @@ def welcome_screen():
         elif play_game == "n":
             end_game()
         else:
-            print("Please enter a valid selection")
+            print("Invalid input. Please enter 'y' to play or 'n' to exit")
 
 
 def end_game():
