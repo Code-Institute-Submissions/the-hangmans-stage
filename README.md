@@ -15,3 +15,11 @@ The title screen welcomes players to the site, explains the rules and asks the p
 ![Themes](assets/docs/screenshots/theme_choices.jpg)
 
 Once the user has input "y" to play the game, they're presented with a list of theme's to choose for the secret word.
+
+### **Game Play Screens***
+
+#### **The secret word**
+
+The secret word is presented to user with a series of underscores which match the length of the secret word.
+
+As the player guesses letters thee letter is appended to a list of used characters which is then printed so the player is aware of letters they have already guessed. If the letter is in the secret word then that letters underscore is replaced by the letter.
