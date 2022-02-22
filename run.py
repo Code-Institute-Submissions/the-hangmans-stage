@@ -82,9 +82,13 @@ def run_game(word):
                      letter in word]
         if "_" not in word_list:
             win_graphic()
-            print("Congratulations, you guessed The hangman's secret word")
-            print(f"The Hangman's secret word was '{word}'")
-            print("Will you risk another go?")
+            print(
+                f"""
+                Congratulations, you guessed The hangman's secret word.
+                The Hangman's secret word was '{word}'
+                You have escaped The Hangmans's stage for now!
+                Will you risk another go?\n
+                """)
             continue_game()
         print(word_list)
         print('Current word: ', ' '.join(word_list))
@@ -109,8 +113,11 @@ def run_game(word):
         print(hangman_lives(lives_left))
     if lives_left == 0:
         lose_graphic()
-        print("You failed to guess The hangman's secret word")
-        print(f"The Hangman's secret word was '{word}'")
+        print(
+            f"""
+            You failed to guess The hangman's secret word
+            The Hangman's secret word was '{word}'\n
+            """)
         continue_game()
 
 
