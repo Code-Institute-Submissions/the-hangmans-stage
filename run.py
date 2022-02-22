@@ -51,7 +51,7 @@ def continue_game():
     elif replay == "n":
         end_game()
     else:
-        print("Please enter a valid selection")
+        print("Invalid input. Please enter 'y' to continue or 'n' to exit")
 
 
 def select_theme():
@@ -77,7 +77,7 @@ def select_theme():
                 word = random.choice(words)
             run_game(word)
         else:
-            print("Please choose a valid theme")
+            print("Please enter 1, 2 or 3 to choose a valid theme")
 
 
 def run_game(word):
@@ -108,7 +108,7 @@ def run_game(word):
         elif lives == "3":
             lives_left = 3
         else:
-            print("Please choose a valid option")
+            print("Please enter '6' for 6 lives or '3' for 3 lives")
     while lives_left > 0:
         word_list = [letter if letter in already_guessed else '_' for
                      letter in word]
@@ -140,7 +140,7 @@ def run_game(word):
         elif len(guessed_letter) != 1:
             print("Please enter 1 letter at a time")
         else:
-            print("You entered an invalid character!")
+            print("You entered an invalid character! Pick a letter from a - z")
         print("Used letters: " + ", ".join(already_guessed) + "\n")
         print(hangman_lives(lives_left))
     if lives_left == 0:
