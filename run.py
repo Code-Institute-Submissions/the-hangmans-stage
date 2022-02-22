@@ -4,8 +4,8 @@ from words import superheroes, words, cartoons
 
 def welcome_screen():
     """
-    This is the home screen and will take the players username
-    and welcome them to the game.
+    This is the games home screen, it displays the title graphic,
+    welcomes them to the game and explain the rules.
     """
     title_graphic()
     print("Hi, welcome to The Hangman's Stage!")
