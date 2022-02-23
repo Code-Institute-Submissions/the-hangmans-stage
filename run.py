@@ -57,7 +57,7 @@ def continue_game():
 def select_theme():
     """
     This function allows the user to select a theme for their secret word.
-    It will then choose a random word from the choosen theme list.
+    It will then choose a random word from the choosen theme list text file.
     """
     while True:
         print("Please choose a theme for your secret word\n")
