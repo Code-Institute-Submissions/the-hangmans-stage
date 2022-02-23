@@ -149,7 +149,7 @@ def run_game(word):
             continue_game()
         print(word_list)
         print('Current word: ', ' '.join(word_list))
-        guessed_letter = input("Please guess a letter:\n").lower()
+        guessed_letter = input("Please guess a letter:\n").upper()
         if len(guessed_letter) == 1 and guessed_letter.isalpha():
             if guessed_letter in guesses:
                 print("You have already guessed that letter")
