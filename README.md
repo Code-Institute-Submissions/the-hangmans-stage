@@ -71,7 +71,9 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 **Test 2:** Again I tested incorrect input as in the initial testing.
 
-**Verdict 2:** With the **'while True'** statement, any invalid input printed the appropriate error message and requested the correct input.
+**Result 2:** With the **'while True'** statement, any invalid input printed the appropriate error message and requests the correct input.
+
+**Verdict 2:** This function now works, and the code loops through the game correctly.
 
 ### **Selecting Lives**
 
@@ -85,7 +87,25 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 **Test 2:** As above testing, focusing on incorrect inputs as correct inputs caused no errors.
 
-**Verdict 2:** With the while loop added, the user is prompted for correct inputs until it is entered.
+**Result 2:** With the while loop added, the user is prompted for correct inputs until it is entered.
+
+**Verdict 2:** The code now functions as intended and the user can play the game and start guessing the secret word.
+
+### **Random Words**
+
+**Expected Outcome:** A random word to be selected from the theme text files to be used a the secret word.
+
+**Test:** Selecting a theme from the theme list.
+
+**Result:** Random words were selected from the text files as intended, however as these lists were taken from various sites on the internet (see credits),  some words containted special characters such as commas or blanks spaces. As my input check method uses .isaplha(), this meant users would not be able to guess these words.
+
+**Verdict:** Unguessable answers due to special characters would cause a negative user experience. These words would need to be filtered out.
+
+**Test 2:** I added 'while' loops with 'or' to the random word selection. When a random word was selected, the 'while' loop would look for words containing commas, or blank spaces, or parentheses etc. and then run the random word selection again. To make sure this would work, I reduced the words in the files to a handful, with only 1 word that would pass the test.
+
+**Result 2:** Only one word answers with no special characters or blanks spaces were selected from the theme files.
+
+**Verdict 2:** This function now runs as intened with only relevant words being selected as the random word.
 
 ### **Player Guesses**
 
