@@ -165,7 +165,7 @@ def run_game(word):
         elif len(guessed_letter) != 1:
             print("Please enter 1 letter at a time")
         else:
-            print("You entered an invalid character! Pick a letter from a - z")
+            print("You entered an invalid character! Pick a letter from A - Z")
         print("Used letters: " + ", ".join(guesses) + "\n")
         print(hangman_lives(lives_left))
     if lives_left == 0:
