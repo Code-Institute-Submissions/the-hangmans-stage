@@ -1,7 +1,9 @@
 # **The Hangman's Stage!**
 ## **Aim of the site**
 
-The aim of the site is to allow users to play a single player python command line version of the Hangman game. There are 3 categories of words for players to choose from on each run through of the game. The player then has 6 guesses to correctly guess the secret word or fail the game.
+The aim of the site is to allow users to play a single player python command line version of the Hangman game. There are 5 categories of words for players to choose from on each run through of the game. The player can then if they have 3 or 6 guesses to correctly guess the secret word or fail the game.
+
+I've tried to aim for a broad target audience by including 5 categories. Players can stick to a catergory they feel comfortable with or maybe step out of their comfort zone and choose something different.
 
 ## **Game Features**
 ### **Title Screen**
@@ -38,6 +40,8 @@ If the player manages to correctly guess the word within their 6 lives, they're 
 ## **Possible Future Features**
 
 * A timer feature, so the player is not only playing against the 6 lives but also timing out will result in a failure.
+* Adding a 9 lives option to make the game easier.
+* Adding even more categories.
 
 ## **Technologies Used**
 
