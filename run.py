@@ -70,37 +70,37 @@ def select_theme():
         if theme == "1":
             with open('animals.txt', 'r') as animals:
                 words = animals.readlines()
-            word = random.choice(words)[:-1].lower()
+            word = random.choice(words)[:-1].upper()
             while "-" in word or " " in word or "." in word or "'" in word:
-                word = random.choice(words)[:-1].lower()
+                word = random.choice(words)[:-1].upper()
             run_game(word)
         elif theme == "2":
             with open('countries.txt', 'r') as countries:
                 words = countries.readlines()
-            word = random.choice(words)[:-1].lower()
+            word = random.choice(words)[:-1].upper()
             while "-" in word or " " in word or "." in word or "'" in word:
-                word = random.choice(words)[:-1].lower()
+                word = random.choice(words)[:-1].upper()
             run_game(word)
         elif theme == "3":
             with open('marvel.txt', 'r') as marvel:
                 words = marvel.readlines()
-            word = random.choice(words)[:-1].lower()
+            word = random.choice(words)[:-1].upper()
             while "-" in word or " " in word or "." in word or "'" in word:
-                word = random.choice(words)[:-1].lower()
+                word = random.choice(words)[:-1].upper()
             run_game(word)
         elif theme == "4":
             with open('pokemon.txt', 'r') as pokemon:
                 words = pokemon.readlines()
-            word = random.choice(words)[:-1].lower()
+            word = random.choice(words)[:-1].upper()
             while "-" in word or " " in word or "." in word or "'" in word:
-                word = random.choice(words)[:-1].lower()
+                word = random.choice(words)[:-1].upper()
             run_game(word)
         elif theme == "5":
             with open('random_words.txt', 'r') as random_words:
                 words = random_words.readlines()
-            word = random.choice(words)[:-1].lower()
+            word = random.choice(words)[:-1].upper()
             while "-" in word or " " in word or "." in word or "'" in word:
-                word = random.choice(words)[:-1].lower()
+                word = random.choice(words)[:-1].upper()
             run_game(word)
         else:
             print("Enter a number between 1 and 5 to choose a valid theme")
