@@ -58,7 +58,8 @@ def select_theme():
     """
     This function allows the user to select a theme for their secret word.
     It will then choose a random word from the choosen theme list text file.
-    I have used 'while' to filter only for single word answers in my theme files.
+    I have used 'while' to filter only for single word answers in my theme
+    files.
     """
     while True:
         print("Please choose a theme for your secret word\n")
