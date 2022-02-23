@@ -114,3 +114,21 @@ The game has been deployed using Heroku and runs in a command line Python Termin
         * The backslashes present in the ASCII Art used for my title, win and fail graphics would cause these graphics to be printed out incorrectly. These would appear blue in the code
     * ***Solution***
         * To resolve this, I had to use double backslashes wherever a blue backslash was present.
+
+## **Credits**
+
+[AZ Animals](https://a-z-animals.com/animals/) for the list of animals.
+
+[Kalinchernev](https://gist.github.com/kalinchernev/486393efcca01623b18d) on [GitHub Gist](https://gist.github.com/) for plain text list of countries.
+
+[Marvel](https://www.marvel.com/comics/characters) for the list of Marvel Comic characters.
+
+[Phawks](https://www.reddit.com/r/pokemon/comments/1qrnw8/i_made_a_few_plain_text_printer_friendly_pokemon/) user on [Reddit](reddit.com) for google docs spreadsheet of Pokemon.
+
+[Random Lists](https://www.randomlists.com) for a random list of words.
+
+[Kylie Ying](https://www.youtube.com/watch?v=cJJTnI22IF8&t=513s) tutorial on youtube. The code used for the secert word to be displayed as underscores (___) then revlealing a correct letter was taken from this tutorial. This code is present on line 139 of the run.py file.
+
+[Stack Overflow](https://stackoverflow.com/questions/32773275/pulling-a-random-word-string-from-a-line-in-a-text-file-in-python) for the process of selecting a random word from a text file.
+
+Richard Wells, my course mentor for again providing postive reassurance when imposter syndrome sets in.
