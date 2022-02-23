@@ -1,5 +1,4 @@
 import random
-from words import superheroes, words, cartoons
 
 
 def welcome_screen():
@@ -62,23 +61,49 @@ def select_theme():
     """
     while True:
         print("Please choose a theme for your secret word\n")
-        print("1 - Superheroes")
-        print("2 - Cartoons")
-        print("3 - anything goes")
+        print("1 - Animals")
+        print("2 - Country Names")
+        print("3 - Marvel Comic Characters")
+        print("4 - Pokemon")
+        print("5 - Random Words")
         theme = input("\n")
         if theme == "1":
-            word = random.choice(superheroes)
+            with open('animals.txt', 'r') as animals:
+                words = animals.readlines()
+            word = random.choice(words)[:-1].lower()
+            while "-" in word or " " in word or "." in word or "'" in word:
+                word = random.choice(words)[:-1].lower()
             run_game(word)
         elif theme == "2":
-            word = random.choice(cartoons)
+            with open('countries.txt', 'r') as countries:
+                words = countries.readlines()
+            word = random.choice(words)[:-1].lower()
+            while "-" in word or " " in word or "." in word or "'" in word:
+                word = random.choice(words)[:-1].lower()
             run_game(word)
         elif theme == "3":
-            word = random.choice(words)
-            while "-" in word or " " in word:
-                word = random.choice(words)
+            with open('marvel.txt', 'r') as marvel:
+                words = marvel.readlines()
+            word = random.choice(words)[:-1].lower()
+            while "-" in word or " " in word or "." in word or "'" in word:
+                word = random.choice(words)[:-1].lower()
+            run_game(word)
+        elif theme == "4":
+            with open('pokemon.txt', 'r') as pokemon:
+                words = pokemon.readlines()
+            word = random.choice(words)[:-1].lower()
+            while "-" in word or " " in word or "." in word or "'" in word:
+                word = random.choice(words)[:-1].lower()
+            run_game(word)
+        elif theme == "5":
+            with open('random_words.txt', 'r') as random_words:
+                words = random_words.readlines()
+            word = random.choice(words)[:-1].lower()
+            while "-" in word or " " in word or "." in word or "'" in word:
+                word = random.choice(words)[:-1].lower()
             run_game(word)
         else:
-            print("Please enter 1, 2 or 3 to choose a valid theme")
+            print("Enter a number between 1 and 5 to choose a valid theme")
 
 
 def run_game(word):
