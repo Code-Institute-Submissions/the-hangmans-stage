@@ -116,8 +116,6 @@ def run_game(word):
     guessed letters. Incorrect guesses display the hanging stages.
     """
     secret = "_" * len(word)
-    print(f" guess the word: {secret}")
-    print(word)
     guesses = []
     lives_left = 0
     print(
@@ -136,6 +134,7 @@ def run_game(word):
             lives_left = 3
         else:
             print("Please enter '6' for 6 lives or '3' for 3 lives")
+    print("")
     while lives_left > 0:
         word_list = [letter if letter in guesses else '_' for letter in word]
         if "_" not in word_list:
@@ -148,7 +147,6 @@ def run_game(word):
                 Will you risk another go?\n
                 """)
             continue_game()
-        print(word_list)
         print('Current word: ', ' '.join(word_list))
         guessed_letter = input("Please guess a letter:\n").upper()
         if len(guessed_letter) == 1 and guessed_letter.isalpha():
