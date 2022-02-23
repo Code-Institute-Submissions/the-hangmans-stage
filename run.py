@@ -18,14 +18,14 @@ def welcome_screen():
         )
     while True:
         print("Would you like to play Hangman?")
-        play_game = input("Enter 'y' for yes and 'n' for no:\n").lower()
+        play_game = input("Enter 'Y' for yes and 'N' for no:\n").upper()
         print("")
-        if play_game == "y":
+        if play_game == "Y":
             select_theme()
-        elif play_game == "n":
+        elif play_game == "N":
             end_game()
         else:
-            print("Invalid input. Please enter 'y' to play or 'n' to exit")
+            print("Invalid input. Please enter 'Y' to play or 'N' to exit")
 
 
 def end_game():
@@ -45,13 +45,13 @@ def continue_game():
     print("Would you like to continue playing?\n")
     print("y - Continue playing")
     print("n - Exit Game")
-    replay = input("\n").lower()
-    if replay == "y":
+    replay = input("\n").upper()
+    if replay == "Y":
         select_theme()
-    elif replay == "n":
+    elif replay == "N":
         end_game()
     else:
-        print("Invalid input. Please enter 'y' to continue or 'n' to exit")
+        print("Invalid input. Please enter 'Y' to continue or 'N' to exit")
 
 
 def select_theme():
