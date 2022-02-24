@@ -28,6 +28,8 @@ Once the user has input "Y" to play the game, they're presented with a list of f
 
 The secret word is presented to user with a series of underscores which match the length of the secret word. Underscores are replaced with correct letter guesses.
 
+![Revealed and guessed letters](assets/docs/screenshots/revealed_letters.jpg)
+
 As the player guesses letters, the letter is appended to a list of used characters which is then printed so the player is aware of letters they have already guessed. 
 
 **Invalid Selections**
