@@ -109,16 +109,11 @@ def select_theme():
             print("Enter a number between 1 and 5 to choose a theme")
 
 
-def run_game(word):
+def select_lives():
     """
-    Will start the game if the user enters 'Y' on the welcome screen
-    and has choosen a theme for their secret word. It takes the arguement
-    'word' to use a word for the player to guess. It displays underscores
-    for the length of the secret word and replaces these with correctly
-    guessed letters. Incorrect guesses display the hanging stages.
+    This function allows the user to select how many lives they wish to
+    play with.
     """
-    secret = "_" * len(word)
-    guesses = []
     lives_left = 0
     print(
         """
@@ -131,11 +126,25 @@ def run_game(word):
     while lives_left == 0:
         lives = input("\n")
         if lives == "6":
-            lives_left = 6
+            return 6
         elif lives == "3":
-            lives_left = 3
+            return 3
         else:
             print("Please enter '6' for 6 lives or '3' for 3 lives")
+    print("")
+
+
+def run_game(word):
+    """
+    Will start the game if the user enters 'Y' on the welcome screen
+    and has choosen a theme for their secret word. It takes the arguement
+    'word' to use a word for the player to guess. It displays underscores
+    for the length of the secret word and replaces these with correctly
+    guessed letters. Incorrect guesses display the hanging stages.
+    """
+    secret = "_" * len(word)
+    guesses = []
+    lives_left = select_lives()
     print("")
     while lives_left > 0:
         word_list = [letter if letter in guesses else '_' for letter in word]
@@ -328,6 +337,7 @@ def hangman_lives(lives_left):
         """
     ]
     return hanging_stages[lives_left]
+
 
 def main():
     """
