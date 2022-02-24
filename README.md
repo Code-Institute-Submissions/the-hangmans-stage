@@ -1,11 +1,14 @@
 # **The Hangman's Stage!**
+
+![Am I Responsive](assets/docs/screenshots/amiresponsive.jpg)
+
 ## **Aim of the site**
 
 The aim of the site is to allow users to play a single player python command line version of the Hangman game. There are 5 categories of words for players to choose from on each run through of the game. The player can then select if they have three or six lives to correctly guess the secret word or fail the game.
 
 I've tried to aim for a broad target audience by including five categories. Players can stick to a catergory they feel comfortable with or maybe step out of their comfort zone and choose something different.
 
-The deployed site can be found [here](https://the-hangmans-stage.herokuapp.com/)
+[The deployed site can be found here](https://the-hangmans-stage.herokuapp.com/)
 
 ## **Game Features**
 ### **Title Screen**
