@@ -111,7 +111,7 @@ def select_theme():
 
 def run_game(word):
     """
-    Will start the game if the user enters 'y' on the welcome screen
+    Will start the game if the user enters 'Y' on the welcome screen
     and has choosen a theme for their secret word. It takes the arguement
     'word' to use a word for the player to guess. It displays underscores
     for the length of the secret word and replaces these with correctly
@@ -174,7 +174,7 @@ def run_game(word):
         print(
             f"""
             You failed to guess The hangman's secret word
-            The Hangman's secret word was '{word}'\n
+            The Hangman's secret word was '{word}.'\n
             """)
         continue_game()
 
