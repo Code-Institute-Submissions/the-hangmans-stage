@@ -106,7 +106,7 @@ def select_theme():
                 word = random.choice(words)[:-1].upper()
             run_game(word)
         else:
-            print("Enter a number between 1 and 5 to choose a valid theme")
+            print("Enter a number between 1 and 5 to choose a theme")
 
 
 def run_game(word):
