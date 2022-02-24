@@ -60,7 +60,7 @@ Once the game is over and the player has won or lost they can either choose to c
 * A timer feature, so the player will fail the game either if they lose their lives OR the timer runs out.
 * Adding a nine lives option to make the game easier.
 * Adding even more categories.
-* Set variables so the player is not asked to select a new theme and amount of lives after every word if they continue playing.
+* Adding a feature so the player is not asked to select a new theme and amount of lives after every word if they continue playing.
 
 ## **Technologies Used**
 
@@ -77,11 +77,13 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 **Test:** These were tested with correct inputs to make sure the code would progress. Incorrect inputs, such as numbers, upper and lowercase letters, special characters and blank spaces were also tested.
 
-**Verdict:** In the above user inputs, all correct inputs progressed the code correctly and incorrect inputs displayed a message prompting the user for the right input. Two user inputs did not originally run as intended so I have listed their individual testing.
+**Result:** In the above user inputs, all correct inputs progressed the code correctly and incorrect inputs displayed a message prompting the user for the right input. Two user inputs did not originally run as intended so I have listed their individual testing.
+
+**Verdict:** Code functioned as intended and did not break at any stage.
 
 #### **Starting the Game**
 
-**Expected Outcome:** The player is given two options on the welcome screen, Y to play the game and N to exit. Any other inputs are expected to return an error message and request the correct input again.
+**Expected Outcome:** The player is given two options on the welcome screen, Y to play the game or N to exit. Any other inputs are expected to return an error message and request the correct input again.
 
 **Test:** To test this I tried to input characters other than Y or N, such as lowercase letters, numbers, special characters and more than one character.
 
@@ -103,7 +105,9 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 **Test:** Inputting three or six to see if the code will progress and inputting invalid options.
 
-**Verdict:** If the user inputs three or six the game progresses as intended, however, any invalid inputs printed the intended error but then exited the code causing the game to stop.
+**Result:** If the user inputs three or six the game progresses as intended, however, any invalid inputs printed the intended error but then exited the code causing the game to stop.
+
+**Verdict:** This test has failed as incorrect inputs broke out of the code.
 
 **Solution:** To solve this, I added a 'while lives_left == 0' loop to continue to request the correct input upon an invalid input.
 
