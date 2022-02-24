@@ -22,19 +22,28 @@ Once the user has input "Y" to play the game, they're presented with a list of f
 
 **The Secret Word**
 
+![Secret Word](assets/docs/screenshots/secret_word.jpg)
+
 The secret word is presented to user with a series of underscores which match the length of the secret word. Underscores are replaced with correct letter guesses.
 
 As the player guesses letters, the letter is appended to a list of used characters which is then printed so the player is aware of letters they have already guessed. 
 
 **Invalid Selections**
 
+![Invalid Input](assets/docs/screenshots/invalid_input.jpg)
+
 If the player inputs an invalid selection, such as too many letters, numbers or a letter than have already entered, they're presented with an error message.
 
 **Hanging Stages**
 
+![Hanging Stages](assets/docs/screenshots/hanging_man.jpg)
+
 Each incorrect answer is visually represented with a hangman graphic. Each of the lives is associated with a body part: head, torso, left arm, right arm, left leg and right leg. If a player chooses to play with three lives then the first hanging image shown is relevant to three lives left.
 
 **Correctly Or Incorrectly Guessing The Word**
+
+![Win Message](assets/docs/screenshots/win.jpg)
+![Fail Message](assets/docs/screenshots/fail.jpg)
 
 If the player manages to correctly guess the word within their lives, they're presented with a congratulatory message and asked if they would like to continue playing. On the other hand, if the player fails to guess the word, they're presented with a fail message and again asked if they would like to continue playing. In both instances, players are also given the option to exit the game.
 
@@ -137,6 +146,8 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 **Verdict:** The win or lose messages are displayed, however there was a bug caused by the ASCII were causing them to display incorrectly. This is documented below in the Bugs section.
 
 ## **Validator testing**
+
+![PEP8](assets/docs/screenshots/pep8.jpg)
 
 I have run the python code through the [PEP8 Validator](http://pep8online.com/) which resulted in no errors.
 
