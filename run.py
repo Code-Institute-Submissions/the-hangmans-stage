@@ -329,5 +329,10 @@ def hangman_lives(lives_left):
     ]
     return hanging_stages[lives_left]
 
+def main():
+    """
+    Runs the program.
+    """
+    welcome_screen()
 
-welcome_screen()
+main()
