@@ -5,6 +5,8 @@ The aim of the site is to allow users to play a single player python command lin
 
 I've tried to aim for a broad target audience by including five categories. Players can stick to a catergory they feel comfortable with or maybe step out of their comfort zone and choose something different.
 
+The deployed site can be found [here](https://the-hangmans-stage.herokuapp.com/)
+
 ## **Game Features**
 ### **Title Screen**
 
@@ -158,6 +160,25 @@ I have run the python code through the [PEP8 Validator](http://pep8online.com/) 
         * The backslashes present in the ASCII Art used for my title, win and fail graphics would cause these graphics to be printed out incorrectly. These would appear blue in the code
     * ***Solution***
         * To resolve this, I had to use double backslashes wherever a blue backslash was present.
+
+## **Deployment**
+
+The page was deployed using Heroku. The procedure to do this was:
+1. Use [GitHub](https://github.com) to build project.
+2. Push built project code to GitHub.
+3. Navigate to [Heroku](https://heroku.com)
+4. Login or signup to the site.
+5. Select create a new app, select a unique name and region.
+6. Click settings, then reveal config vars.
+7. Add PORT to the KEY field and 8000 to the VALUE field.
+8. Select Buildpack, select Python and save.
+9. Select Buildpacks again and select Nodejs and save again.
+10. Ensure order of Buildpacks is Python then Nodejs.
+11. Navigate to the deploy tab, choose GitHub as deployment method and connect to you GitHub account.
+12. Enter your repository and connect.
+13. Select either automatic deploys which automatically deploys whenever you push to GitHub, or manual deploys to deploy manually.
+14. Once deployment is finished, click view to be taken to the deployed app.
+15. [Live site here](https://the-hangmans-stage.herokuapp.com/)
 
 ## **Credits**
 
