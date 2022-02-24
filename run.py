@@ -5,6 +5,7 @@ def welcome_screen():
     """
     This is the games home screen, it displays the title graphic,
     welcomes players to the game and explain the rules.
+    Players are asked to input Y or N to play or exit the game."
     """
     title_graphic()
     print("Hi, welcome to The Hangman's Stage!")
